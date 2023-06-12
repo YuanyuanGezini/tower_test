@@ -22,7 +22,7 @@ raw_ch.editargs.view()
 
 workflow {
     read_rename( raw_ch.rawreads )
-    arg_parse( raw_ch.editargs )
+    //arg_parse( raw_ch.editargs )
 }
 
 process read_rename {
