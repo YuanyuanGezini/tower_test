@@ -1,0 +1,40 @@
+{
+    "title": "Aeratx test pipeline - params.input schema",
+    "description": "Schema for the samplesheet provided with params.input",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "Sample": {
+                "type": "string",
+                "pattern": "^\\S+$",
+                "errorMessage": "Sample name must be provided and cannot contain spaces",
+                "meta": ["id"]
+            },
+            "fastq_1": {
+                "type": "string",
+                "pattern": "^\\S+\\.f(ast)?q\\.gz$",
+                "errorMessage": "FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'"
+            },
+            "fastq_2": {
+                "type": "string",
+                "pattern": "^\\S+\\.f(ast)?q\\.gz$",
+                "errorMessage": "FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'"                
+            },
+            "newid": {
+                "type": "string",
+                "errorMessage": "New sample ID must be provided and cannot contain spaces"
+            },
+            "guide": {
+                "type": "string",
+                "errorMessage": "guide must be DNA sequence"
+            },
+            "amplicon": {
+                "type": "string",
+                "errorMessage": "amplicon must be DNA sequence"
+
+            }
+        },
+    "required": ["Sample", "fastq_1", "fastq_2", "newid", "guide", "amplicon"]
+    }
+}

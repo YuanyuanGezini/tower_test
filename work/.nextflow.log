@@ -1,0 +1,14 @@
+Jun-12 19:20:06.852 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input test_samplesheet.csv --outdir 'gs://starlit-myth-tower/ngs_test/demultiplexed' -with-tower
+Jun-12 19:20:06.902 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.03.0-edge
+Jun-12 19:20:06.925 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/yuanyuangao/.nextflow/plugins; core-plugins: nf-amazon@1.16.0,nf-azure@0.16.0,nf-codecommit@0.1.3,nf-console@1.0.5,nf-ga4gh@1.0.4,nf-google@1.7.1,nf-tower@1.5.10,nf-wave@0.8.0
+Jun-12 19:20:06.934 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-12 19:20:06.935 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-12 19:20:06.938 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jun-12 19:20:06.947 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-12 19:20:06.961 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/yuanyuangao/.nextflow/scm
+Jun-12 19:20:06.970 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.exception.AbortOperationException: Cannot find script file: main.nf
+	at nextflow.cli.CmdRun.getScriptFile(CmdRun.groovy:463)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:315)
+	at nextflow.cli.Launcher.run(Launcher.groovy:495)
+	at nextflow.cli.Launcher.main(Launcher.groovy:654)

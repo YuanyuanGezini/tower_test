@@ -1,0 +1,12 @@
+{
+uris = gs://starlit-myth-structure/test/test_uri_MSA_fasta_short_1.txt,
+gcs_path = gs://starlit-myth-structure/test/tower/
+msa_mode = custom
+colabfold_batch_size = 10
+build_msa = --filter 1 --expand-eval 0.1 --align-eval 10 --diff 3000 --qsc 0.8
+foldseek_db_gcs_path_prefix = gs://starlit-myth-structure/foldseek/pdb_082022
+colabfold_args = --stop-at-score 20 --num-models 1 --num-recycle 1
+foldseek_args = -s 7.5 --max-seqs 100000 --tmalign-fast 0 -e 0.1 --tmscore-threshold 0.33 --exhaustive-search 1 -a --format-mode 4 --format-output "query,target,fident,alnlen,mismatch,gapopen,qstart,qend,tstart,tend,evalue,bits,qcov,alntmscore,taln,lddt,prob"
+mmseqs_db_gcs_path_prefix = gs://starlit-myth-microbial-refseq/uniprot/uniref30/uniref30_2202_db
+run_foldseek = false
+}
